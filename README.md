@@ -1,0 +1,1 @@
+start by generating an "algebra" which is just a long list of symbolic mathematical elements, then group these up so that every element in a group is the same but only differs by a minus sign (or other phase). then print a list of indices of elements in each group, along with the minus signs (phases)
