@@ -1,5 +1,5 @@
 (* ::Package:: *)
-
+SetDirectory[NotebookDirectory[]];
 <<PauliAlgebra`
 alg[n_]:=
 Join[Flatten[Table[\[Sigma]@@ReplacePart[ConstantArray[0, n],Join[{j->1},Table[i->3,{i,j+1,j+k}],{j+k+1->1}]],{j,n-1},{k,0,n-1-j}]],Flatten[Table[\[Sigma]@@ReplacePart[ConstantArray[0,n],Join[{j->2},Table[i->3,{i,j+1,j+k}],{j+k+1->2}]],{j,n-1},{k,0,n-1-j}]],Flatten[Table[\[Sigma]@@ReplacePart[ConstantArray[0,n],Join[{j->1},Table[i->3,{i,j+1,j+k}],{j+k+1->2}]],{j,n-1},{k,0,n-1-j}]],Flatten[Table[\[Sigma]@@ReplacePart[ConstantArray[0,n], Join[{j->2}, Table[i->3, {i,j+1,j+k}], {j+k+1->1}]],{j,n-1},{k,0,n-1-j}]],Table[\[Sigma]@@ReplacePart[ConstantArray[0, n],{i-> 3}],{i,n}],Table[\[Sigma]@@ReplacePart[ConstantArray[0, n], Join[{j+1->1},Table[i->3,{i,1,j}]]],{j,0,n-1}],
